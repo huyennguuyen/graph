@@ -19,11 +19,12 @@ function getNeighbors(row, col, graph) {
     neighbors.push([row, col - 1])
   }
   // Check right
-  if (col < graph[0].length -1 && graph[row][col + 1] === 1) {
+  if (col < graph[0].length && graph[row][col + 1] === 1) {
     neighbors.push([row, col + 1])
   }
   // Return neighbors
   return neighbors;
+
 }
 
 
@@ -42,5 +43,6 @@ function islandSize(row, col, graph) {
   // return size
   // Your code here
 }
+
 
 module.exports = [getNeighbors, islandSize];
